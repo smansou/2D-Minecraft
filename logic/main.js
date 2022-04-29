@@ -46,10 +46,10 @@ const blockTypes = {
     5: 'leaf'
 }
 const blocksAndTools = {
-    'axe':  'wood',
+    'axe':  ['wood'],
     'shovel': ['dirt','grass'],
-    'pickaxe': 'stone',
-    'shears': 'leaf'
+    'pickaxe': ['stone'],
+    'shears': ['leaf']
     
 }
 
@@ -67,6 +67,7 @@ const gameObject ={
     document.querySelector(".stoneCount").innerHTML = inventory["stone"];
     document.querySelector(".dirtCount").innerHTML = inventory["dirt"];
     document.querySelector(".grassCount").innerHTML = inventory["grass"];
+    document.querySelector(".leafCount").innerHTML = inventory["leaf"];
    }
     updateInventory();
    document.querySelector(".game-board").addEventListener('click', ()=>{updateInventory()});
@@ -96,11 +97,22 @@ function start() {
    
 const allTools = document.querySelectorAll("[data-type='tool']");
     for (let elm = 0; elm < allTools.length; elm++) {
+        
         allTools[elm].addEventListener('click', () => {
+            allTools[0].setAttribute("data-selected", "off");
+            allTools[1].setAttribute("data-selected", "off");
+            allTools[2].setAttribute("data-selected", "off");
+            allTools[3].setAttribute("data-selected", "off");
+            
             gameObject.status = "collecting";
             gameObject.selectedTool = allTools[elm].getAttribute("data-toolType");
+            allTools[elm].setAttribute("data-selected", "on");
+
+            
+           
 })
     }
+    
     
     const allBlocks = document.querySelectorAll("[data-type='block']");
     for (let elm = 0; elm < allBlocks.length; elm++) {
@@ -111,7 +123,7 @@ const allTools = document.querySelectorAll("[data-type='tool']");
                 if (gameObject.status === "collecting"){
             gameObject.selectedBlock = allBlocks[elm].getAttribute("data-blockType");
             // if(gameObject.selectedTool!=''){ 
-                if (blocksAndTools[gameObject.selectedTool]===gameObject.selectedBlock){
+                if (blocksAndTools[gameObject.selectedTool][0]===gameObject.selectedBlock || blocksAndTools[gameObject.selectedTool][1]===gameObject.selectedBlock){
                     allBlocks[elm].setAttribute("data-blockType", "sky");
                     inventory[gameObject.selectedBlock]++;
                     

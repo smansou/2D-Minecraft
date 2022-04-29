@@ -30,7 +30,7 @@ body{
     width: 100%;
     /* max-width: 950px; */
     height: 6%;
-    justify-content: space-between;
+    justify-content:space-evenly;
     align-items: center;
     display: flex;
     text-align: center;
@@ -76,33 +76,40 @@ body{
 
 }
 
-div[data-blockType='sky']{
+[data-blockType='sky']{
     background-color: aqua;
    
 }
-div[data-blockType='dirt']{
+[data-blockType='dirt']{
     background:url(./assets/pixelArt/dirt.jpeg);
     background-size: contain;
 }
-div[data-blockType='stone']{
+[data-blockType='stone']{
     background:url(./assets/pixelArt/stone.jpeg);
     background-size: contain ;
 }
 
-div[data-blockType='wood']{
+[data-blockType='wood']{
     background:url(./assets/pixelArt/wood.png);
     background-size: contain ;
 }
 
-div[data-blockType='grass']{
+[data-blockType='grass']{
     background:url(./assets/pixelArt/grass.jpeg);
     background-size: cover;
 
 }
-div[data-blockType='leaf']{
+[data-blockType='leaf']{
     background:url(./assets/pixelArt/leaf.jpeg);
     background-size: contain;
 
+}
+
+[data-selected='on']{
+    border: 4px dashed white;
+}
+[data-type='tool']:hover{
+   border: 3px dotted white;
 }
 
 .axe{
@@ -128,4 +135,5 @@ div[data-blockType='leaf']{
     background:  url(./assets/pixelArt/shears.png);
     background-size:contain;
     background-repeat: no-repeat;
+    transform: scaleX(-1);
 }
