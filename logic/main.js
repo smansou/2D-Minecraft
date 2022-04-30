@@ -99,6 +99,7 @@ function start() {
             allTools.forEach((e) => { e.setAttribute("data-selected", "off") })
             allResources.forEach((e) => { e.setAttribute("data-selected", "off") })
             document.querySelector(`.${gameObject.selectedResource}`).setAttribute("data-selected", "on");
+            document.body.style.cursor = cursor[gameObject.selectedResource];
 
          }
          })
@@ -118,13 +119,24 @@ function start() {
             allTools.forEach((e) => { e.setAttribute("data-selected", "off") })
             allResources.forEach((e) => { e.setAttribute("data-selected", "off") })
             document.querySelector(`.${gameObject.selectedTool}`).setAttribute("data-selected", "on");
+            document.body.style.cursor = cursor[gameObject.selectedTool];
+           
 
 
 
 
         })
     }
-
+const cursor ={
+    "axe": "url(/assets/pixelArt/axecursor.png), default",
+    "pickaxe": "url(/assets/pixelArt/pickaxecursor.png), default",
+    "shovel": "url(/assets/pixelArt/shovelcursor.png), default",
+    "shears": "url(/assets/pixelArt/shearscursor.png), default",
+    "leaf": "url(/assets/pixelArt/leafblockcursor.png), default",
+    "grass": "url(/assets/pixelArt/grassblockcursor.png), default",
+    "wood": "url(/assets/pixelArt/woodblockcursor.png), default",
+    "stone": "url(/assets/pixelArt/stoneblockcursor.png), default",
+}
 
     const allBlocks = document.querySelectorAll("[data-type='block']");
     for (let elm = 0; elm < allBlocks.length; elm++) {

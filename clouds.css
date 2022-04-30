@@ -2,7 +2,7 @@
 
 .cloud, .cloud_two{
     z-index: 2;
-	animation: move 6s ease infinite;
+	animation: move 3s ease infinite;
  border-radius: 50%;
   position: absolute;
   top: 20%; left: 50%;
@@ -20,11 +20,11 @@
 
 .cloud_two{
 	top: 28%; left: 17%;
-  animation-duration: 8s;
+  animation-duration: 5s;
 }
 
 @keyframes move{
-  50% { transform: translateY(-15px); }
+  50% { transform: translateY(-25px); }
 }
 @media(max-width:720px){
     .cloud{
