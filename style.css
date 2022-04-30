@@ -2,7 +2,9 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    
 }
+html{ overflow: hidden;}
 body{
     height: 100vh;
     width: 100vw;
@@ -11,37 +13,54 @@ body{
     display: flex;
     flex-direction: column;
     margin: 0;
-    
-    background-color: rgb(134, 134, 134);
+    background-color: rgb(44, 43, 43);
+  
    
 }
+
 .container{
     height: 100vmin;
     width: 100vmin;
     align-items: center;
     justify-content: center;
-   
     display: flex;
     flex-direction: column;
     margin: 0;
+    z-index: 5;
+    overflow: hidden;
+    
+   
 }
 .top{
     border: 1px solid black;
     width: 100%;
     /* max-width: 950px; */
-    height: 6%;
+    height: 8%;
     justify-content:space-evenly;
     align-items: center;
     display: flex;
     text-align: center;
     color: white;
+    background-color: black;
+    z-index: 3;
+    
 }
+[data-type="resource"]{
+    width: 10vw;
+    height: 80%;
+    
+    
+}
+
 .wrapper{
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
     width: 100%;
+   
+
+    
 }
 .sidebar{
     border: 1px solid black;
@@ -51,6 +70,8 @@ body{
     display: flex;
     flex-direction: column;
     justify-content:space-between;
+    z-index: 3;
+    background-color: black;
 
 }
 .side-flex{
@@ -76,10 +97,18 @@ body{
 
 }
 
-[data-blockType='sky']{
-    background-color: aqua;
+[data-type='block']{
+   z-index: 3;
    
 }
+
+[data-blockType='sky']{
+    background-color: #00b4ff;
+    opacity: 100%;
+    z-index: 1;
+   
+}
+
 [data-blockType='dirt']{
     background:url(./assets/pixelArt/dirt.jpeg);
     background-size: contain;
@@ -106,10 +135,15 @@ body{
 }
 
 [data-selected='on']{
-    border: 4px dashed white;
+    box-shadow: inset 0 0 10px #ffffff;
 }
 [data-type='tool']:hover{
-   border: 3px dotted white;
+    box-shadow: inset 2px 0 10px #ffffff;
+    
+}
+[data-type='resource']:hover{
+    box-shadow: inset 2px 0 10px #ffffff;
+    
 }
 
 .axe{
@@ -136,4 +170,30 @@ body{
     background-size:contain;
     background-repeat: no-repeat;
     transform: scaleX(-1);
+}
+
+.leaf{
+    background: url(./assets/pixelArt/leafblock.png);
+    background-size:contain;
+    background-repeat: no-repeat;
+}
+.stone{
+    background: url(./assets/pixelArt/stoneblock.png);
+    background-size:contain;
+    background-repeat: no-repeat;
+}
+.grass{
+    background: url(./assets/pixelArt/grassblock.png);
+    background-size:contain;
+    background-repeat: no-repeat;
+}
+.wood{
+    background: url(./assets/pixelArt/woodblock.png);
+    background-size:contain;
+    background-repeat: no-repeat;
+}
+.dirt{
+    background: url(./assets/pixelArt/dirtblock.png);
+    background-size:contain;
+    background-repeat: no-repeat;
 }

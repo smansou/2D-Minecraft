@@ -1,0 +1,55 @@
+
+
+.cloud, .cloud_two{
+    z-index: 2;
+	animation: move 6s ease infinite;
+ border-radius: 50%;
+  position: absolute;
+  top: 20%; left: 50%;
+  margin-top: -30px;
+  margin-left: -30px;
+  background: #FFFFFF;
+  height: 60px; width: 60px;
+  box-shadow:
+		#FFFFFF 65px -15px 0 -5px, 
+		#FFFFFF 25px -25px, 
+		#FFFFFF 30px 10px, 
+		#FFFFFF 60px 15px 0 -10px, 
+		#FFFFFF 85px 5px 0 -5px;
+}
+
+.cloud_two{
+	top: 28%; left: 17%;
+  animation-duration: 8s;
+}
+
+@keyframes move{
+  50% { transform: translateY(-15px); }
+}
+@media(max-width:720px){
+    .cloud{
+     top: 40%
+
+    }
+    .cloud_two{
+        top: 40%;
+    }
+}
+@media(max-width:340px){
+    .cloud{
+     display: none;
+
+    }
+    .cloud_two{
+        display: none;
+    }
+}
+@media(min-width:900px){
+    .cloud{
+    left: 30%
+
+    }
+    .cloud_two{
+      left: 60%;
+    }
+}

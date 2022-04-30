@@ -1,42 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
-   <link rel="stylesheet" href="./style.css"> <title>Document</title>
+
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="clouds.css">
 </head>
 
-    <body> 
-        <div class="container">
+<body>
+    <div class="container">
+
         <div class="top">
-            <div class="dirt" data-type="resource">dirt <p class="dirtCount"></p> </div>
-            <div class="stone" data-type="resource">stone <p class="stoneCount"></p> </div>
-            <div class="wood" data-type="resource">wood  <p class="woodCount"></p></div>
-            <div class="grass" data-type="resource">grass <p class="grassCount"></p></div>
-            <div class="leaf" data-type="resource">leaf <p class="leafCount"></p></div>
+            <div class="dirt" data-type="resource">
+                <p class="dirtCount"></p>
+            </div>
+            <div class="stone" data-type="resource">
+                <p class="stoneCount"></p>
+            </div>
+            <div class="wood" data-type="resource">
+                <p class="woodCount"></p>
+            </div>
+            <div class="grass" data-type="resource">
+                <p class="grassCount"></p>
+            </div>
+            <div class="leaf" data-type="resource">
+                <p class="leafCount"></p>
+            </div>
         </div>
         <div class="wrapper">
-        <div class="game-board">
 
+            <div class="clouds">
+                <div class='cloud'></div>
+                <div class='cloud_two'></div>
+            </div>
+            
+            <div class="game-board">
 
-        </div>
-        <div class="sidebar"> 
-            <div class="side-flex">
-            <div class="axe" data-type="tool" data-toolType = 'axe' data-selected="off" ></div>
-            <div class="shovel" data-type="tool" data-toolType = 'shovel' data-selected="off"></div>
-            <div class="pickaxe" data-type="tool" data-toolType = 'pickaxe' data-selected="off"></div>
-            <div class="shears" data-type="tool" data-toolType = 'shears' data-selected="off"></div>
-        </div>
-            <div></div>
-        </div>
+            </div>
+
+            <div class="sidebar">
+                <div class="side-flex">
+                    <div class="axe" data-type="tool" data-toolType='axe' data-selected="off"></div>
+                    <div class="shovel" data-type="tool" data-toolType='shovel' data-selected="off"></div>
+                    <div class="pickaxe" data-type="tool" data-toolType='pickaxe' data-selected="off"></div>
+                    <div class="shears" data-type="tool" data-toolType='shears' data-selected="off"></div>
+                </div>
+                <div></div>
+            </div>
         </div>
     </div>
-        
+
 
 
 </body>
 <script src='./logic/main.js'></script>
 <script src='./logic/mining.js'></script>
+
 </html>
