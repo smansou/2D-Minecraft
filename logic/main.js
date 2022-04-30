@@ -13,20 +13,20 @@ const board = [
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 5, 5, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 5, 5, 5, 5, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 5, 5, 5, 5, 5, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 5, 5, 5, 5, 5, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 5, 5, 5, 5, 5, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 5, 5, 5, 5, 5, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 3, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 3, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 3, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-    [2, 0, 0, 0, 3, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-    [2, 0, 0, 0, 3, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 0, 0, 0, 0, 0, 0],
-    [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 5, 5, 5, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 5, 5, 5, 5],
+    [0, 0, 0, 5, 5, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 5, 5, 5, 5],
+    [0, 0, 5, 5, 5, 5, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 5, 5, 5, 5],
+    [0, 0, 5, 5, 5, 5, 5, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 5, 5, 5, 5],
+    [0, 0, 5, 5, 5, 5, 5, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 0, 0],
+    [0, 0, 5, 5, 5, 5, 5, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 0, 0],
+    [0, 0, 5, 5, 5, 5, 5, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 0, 0],
+    [0, 0, 0, 0, 3, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 0, 0],
+    [0, 0, 0, 0, 3, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 4, 4, 4, 4, 4],
+    [0, 0, 0, 0, 3, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 1, 1, 1, 1, 1, 1],
+    [2, 2, 2, 0, 3, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 1, 1, 1, 1, 1, 1, 1],
+    [2, 2, 2, 0, 3, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 1, 1, 1, 1, 1, 1, 1, 1],
+    [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 1, 1, 1, 1, 1, 1, 1, 1, 1],
     [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
     [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
     [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
@@ -66,6 +66,16 @@ const gameObject = {
 
 
 }
+const cursor ={
+    "axe": "url(/assets/pixelArt/axecursor.png), default",
+    "pickaxe": "url(/assets/pixelArt/pickaxecursor.png), default",
+    "shovel": "url(/assets/pixelArt/shovelcursor.png), default",
+    "shears": "url(/assets/pixelArt/shearscursor.png), default",
+    "leaf": "url(/assets/pixelArt/leafblockcursor.png), default",
+    "grass": "url(/assets/pixelArt/grassblockcursor.png), default",
+    "wood": "url(/assets/pixelArt/woodblockcursor.png), default",
+    "stone": "url(/assets/pixelArt/stoneblockcursor.png), default",
+}
 
 function updateInventory() {
     document.querySelector(".woodCount").innerHTML = inventory["wood"];
@@ -87,7 +97,9 @@ function start() {
             gameBoard.appendChild(block);
         }
     }
-
+        document.querySelector(".start-screen").style = "display:none";
+        document.querySelector(".clouds").style = "display:block";
+        document.querySelector(".container").style = "display:block"
 
 
     const allResources = document.querySelectorAll("[data-type='resource']");
@@ -127,16 +139,7 @@ function start() {
 
         })
     }
-const cursor ={
-    "axe": "url(/assets/pixelArt/axecursor.png), default",
-    "pickaxe": "url(/assets/pixelArt/pickaxecursor.png), default",
-    "shovel": "url(/assets/pixelArt/shovelcursor.png), default",
-    "shears": "url(/assets/pixelArt/shearscursor.png), default",
-    "leaf": "url(/assets/pixelArt/leafblockcursor.png), default",
-    "grass": "url(/assets/pixelArt/grassblockcursor.png), default",
-    "wood": "url(/assets/pixelArt/woodblockcursor.png), default",
-    "stone": "url(/assets/pixelArt/stoneblockcursor.png), default",
-}
+
 
     const allBlocks = document.querySelectorAll("[data-type='block']");
     for (let elm = 0; elm < allBlocks.length; elm++) {
@@ -160,8 +163,12 @@ const cursor ={
                     if (inventory[gameObject.selectedResource] > 0) {
                         allBlocks[elm].setAttribute("data-blockType", gameObject.selectedResource);
                         inventory[gameObject.selectedResource]--;
-                    }
+                     if (inventory[gameObject.selectedResource] === 0){
+                         document.body.style.cursor = "default";
+                     }
                 }
+            }
+
             }
         })
     }
@@ -174,4 +181,4 @@ const cursor ={
 
 
 
-start();
+// start();

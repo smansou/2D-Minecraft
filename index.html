@@ -6,13 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="stylesheet" href="clouds.css">
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/minecraftia" type="text/css"/>
     <link rel="stylesheet" href="./style.css">
     <title>Document</title>
-    <link rel="stylesheet" href="clouds.css">
 </head>
 
 <body>
-    <div class="container">
+    
+    <div class="container" style="display: none;">
 
         <div class="top">
             <div class="dirt" data-type="resource">
@@ -33,7 +35,7 @@
         </div>
         <div class="wrapper">
 
-            <div class="clouds">
+            <div class="clouds" style="display:none">
                 <div class='cloud'></div>
                 <div class='cloud_two'></div>
             </div>
@@ -53,7 +55,8 @@
             </div>
         </div>
     </div>
-
+    <div class="start-screen" style="display: block;">
+        <button class="btn" onclick="start()">Start</button></div>
 
 
 </body>

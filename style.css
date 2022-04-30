@@ -1,3 +1,6 @@
+@import url('http://fonts.cdnfonts.com/css/minecraft-4');
+
+
 *{
     box-sizing: border-box;
     margin: 0;
@@ -5,20 +8,45 @@
     
     
 }
-html{ overflow: hidden;}
+
 body{
     height: 100vh;
     width: 100vw;
     align-items: center;
     justify-content: center;
-    display: flex;
-    flex-direction: column;
+    /* display: flex;
+    flex-direction: column; */
     margin: 0;
     background-color: rgb(44, 43, 43);
     
+    
    
 }
+.start-screen{
+    width: 100%;
+    height: 100%;
+    
+    background:url(./assets/pixelArt/background.jpg) center;
+    
 
+}
+.btn{
+    transform: translate(40vw,90vh);
+    width: 20vw;
+    height: 5vh;
+    background-color: transparent;
+    border: 2px solid white;
+    font-size: 1.5rem;
+    padding-top: 6px;
+    color: white;
+    font-family: 'Minecraft', sans-serif;
+}
+
+.btn:hover{
+    font-size: 40px ;
+    width: 22vw;
+    height: auto;
+}
 .container{
     height: 100vmin;
     width: 100vmin;
@@ -75,30 +103,38 @@ body{
     display: flex;
     flex-direction: column;
     justify-content:space-between;
+    align-items: center;
     z-index: 3;
-    background-color:  #00b4ff;
+    background-color:  #474646;
 
+}
+[data-type='tool']{
+    border: 2px solid #181717;
+    height: 25%;
+    padding: 5px 0;
+    
 }
 .side-flex{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 60%;
+    height: 50%;
     width: 100%;
     
+    
+    
 }
-.side-flex>div{
-    height: 15%;
+/* .side-flex>div{
+    height: 25%;
     padding: 5px;
-    border-bottom: 2px solid beige;
-}
+    
+} */
 .logo{
  transform: rotate(-90deg);
- text-align: center;
- /* padding-left: 32px; */
- font-size: 1.5rem;
- width: 20px;
- border: 1px brown;
+ width: 100%;
+ height: auto;
+ font-size: 1rem; 
+ background: url(./assets/pixelArt/dirt.jpeg) center;
 }
 
 .game-board{
@@ -165,17 +201,14 @@ body{
     box-shadow: inset 2px 0 10px #ffffff;
     
 }
-[data-type='tool']{
-    border-radius: 10%;
-   
-    
-    
-}
+
 
 
 .axe{
     height: 25%;
+    
     background:  url(./assets/pixelArt/axe.png);
+    background-position: 0 18px;
     background-size:contain;
     background-repeat: no-repeat;
 }
@@ -183,12 +216,14 @@ body{
 .pickaxe{
     height: 25%;
     background:  url(./assets/pixelArt/pickaxe1.png);
+    background-position: 0 20px;
     background-size:contain;
     background-repeat: no-repeat;
 }
 .shovel{
     height: 25%;
     background:  url(./assets/pixelArt/shovel.png);
+    background-position: 0 20px;
     background-size:contain;
     background-repeat: no-repeat;
 }
@@ -196,6 +231,7 @@ body{
     height: 25%;
     background:  url(./assets/pixelArt/shears.png);
     background-size:contain;
+    background-position: 0 20px;
     background-repeat: no-repeat;
     transform: scaleX(-1);
 }
